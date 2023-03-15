@@ -12,6 +12,6 @@ class TestDatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DatabaseSeeder::class;
     }
 }
