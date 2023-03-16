@@ -34,7 +34,7 @@
                           Categoriën
                         </a>
                         <ul class="dropdown-menu">
-                            @foreach(ItemCategory:: as $category)
+                            @foreach($categories as $category)
                                 <li><a class="dropdown-item" href="#">{{$category->name}}</a></li>
                             @endforeach
                     </div>

@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('layouts.app');
-});
+}); */
 
 Auth::routes();
-
-//Route::get('/', [App\Http\Controllers\WEB\HomeController::class, 'index'])->name('home');
+// Gets items for front-end
+Route::get('/', [App\Http\Controllers\WEB\HomeController::class, 'index'])->name('home');
