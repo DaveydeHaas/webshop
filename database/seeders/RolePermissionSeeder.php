@@ -15,17 +15,17 @@ class RolePermissionSeeder extends Seeder
     public function run(): void
     {
         $permissions = [
-            ['name' => 'create_items'],
-            ['name' => 'manage_items'],
-            ['name' => 'create_categories'],
-            ['name' => 'manage_tickets'],
-            ['name' => 'write_reviews'],
-            ['name' => 'remove_users_reviews'],
+            ['name' => 'create_items', 'guard_name' => 'api'],
+            ['name' => 'manage_items', 'guard_name' => 'api'],
+            ['name' => 'create_categories', 'guard_name' => 'api'],
+            ['name' => 'manage_tickets', 'guard_name' => 'api'],
+            ['name' => 'write_reviews', 'guard_name' => 'api'],
+            ['name' => 'remove_users_reviews', 'guard_name' => 'api'],
         ];
 
-        $admin = Role::firstOrCreate(['name' => 'admin']);
-        $support = Role::firstOrCreate(['name' => 'support']);
-        $user = Role::firstOrCreate(['name' => 'user']);
+        $admin = Role::firstOrCreate(['name' => 'admin', 'guard_name' => 'api']);
+        $support = Role::firstOrCreate(['name' => 'support', 'guard_name' => 'api']);
+        $user = Role::firstOrCreate(['name' => 'user', 'guard_name' => 'api']);
         
         foreach($permissions as $permission){
             Permission::firstOrCreate(['name' => $permission['name']]);

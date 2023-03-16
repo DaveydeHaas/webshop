@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->unsignedBigInteger('category')->nullable();
             $table->integer('quantity')->nullable();
-            $table->float('price');
+            $table->decimal('price', 9, 2);
             $table->text('description')->nullable();
             $table->unsignedBigInteger('sale')->nullable();
             $table->timestamps();

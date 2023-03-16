@@ -21,7 +21,8 @@ class TestUserSeeder extends Seeder
                 'last_name' => 'Haas',
                 'email' => 'daveydehaas14@gmail.com',
                 'phone_number' => '0621312816',
-                'password' => 'P@ssw0rd'
+                'password' => 'P@ssw0rd',
+                'role' => 'admin',
             ],
             [
                 'first_name' => 'Bert',
@@ -29,7 +30,8 @@ class TestUserSeeder extends Seeder
                 'last_name' => 'Test',
                 'email' => 'Bert@test.com',
                 'phone_number' => '060000000',
-                'password' => 'P@ssw0rd'
+                'password' => 'P@ssw0rd',
+                'role' => 'support',
             ],
             [
                 'first_name' => 'Jan',
@@ -37,7 +39,8 @@ class TestUserSeeder extends Seeder
                 'last_name' => 'Tester',
                 'email' => 'jan@test.com',
                 'phone_number' => '0653943492',
-                'password' => 'P@ssw0rd'
+                'password' => 'P@ssw0rd',
+                'role' => 'user',
             ],
             [
                 'first_name' => 'Kees',
@@ -45,7 +48,8 @@ class TestUserSeeder extends Seeder
                 'last_name' => 'Padje',
                 'email' => 'Kees@test.com',
                 'phone_number' => '0658343435',
-                'password' => 'P@ssw0rd'
+                'password' => 'P@ssw0rd',
+                'role' => 'user',
             ],
             [
                 'first_name' => 'Jacob',
@@ -53,7 +57,8 @@ class TestUserSeeder extends Seeder
                 'last_name' => 'Tenoord',
                 'email' => 'jacob@test.com',
                 'phone_number' => '0624363547',
-                'password' => 'P@ssw0rd'
+                'password' => 'P@ssw0rd',
+                'role' => 'user',
             ],
             [
                 'first_name' => 'Daan',
@@ -61,14 +66,15 @@ class TestUserSeeder extends Seeder
                 'last_name' => 'Boer',
                 'email' => 'Daan@test.com',
                 'phone_number' => '0625343553',
-                'password' => 'P@ssw0rd'
+                'password' => 'P@ssw0rd',
+                'role' => 'user',
             ],
 
         ];
 
         foreach($users as $user){
             $password = Hash::make($user['password']);
-            User::firstOrCreate([
+            $newAccount = User::firstOrCreate([
                 'first_name' => $user['first_name'],
                 'infix' => $user['infix'],
                 'last_name' => $user['last_name'],
@@ -76,6 +82,8 @@ class TestUserSeeder extends Seeder
                 'phone_number' => $user['phone_number'],
                 'password' => $password
             ]);
+
+            $newAccount->assignRole($user['role']);
         }
     }
 }

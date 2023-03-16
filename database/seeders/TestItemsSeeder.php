@@ -18,14 +18,14 @@ class TestItemsSeeder extends Seeder
                 'name' => 'Mario Party',
                 'category' => '1',
                 'quantity' => '4',
-                'price' => '35,86',
+                'price' => '35.86',
                 'description' => 'Mario Party is a party video game series featuring characters from the Mario franchise in which up to four local players or computer-controlled characters compete in a board game interspersed with minigames.'
             ],
             [
                 'name' => 'Nintendo switch',
                 'category' => '2',
                 'quantity' => '1',
-                'price' => '306,55',
+                'price' => '306.55',
                 'description' => 'Dit is het nieuwe Nintendo Switch Rood / Blauw (Neon) model, met verbeterde accuduur. De Switch is jouw spelcomputer voor thuis en onderweg. Beleef onderweg dezelfde game-ervaring als thuis, zelfs zonder tv. De Nintendo Switch kun je in alle situaties gebruiken, zodat je altijd gemakkelijk tussendoor de games kunt spelen die je wilt. Dit systeem luidt een nieuw tijdperk in waarin je je leven niet hoeft aan te passen om games te spelen. In plaats daarvan past het systeem zich aan aan je leven. Speel je favoriete games altijd, overal en met iedereen!'
             ],
             [
@@ -39,7 +39,7 @@ class TestItemsSeeder extends Seeder
                 'name' => 'Nintendo - Super Mario Bowser AOP Men s T-shirt',
                 'category' => '4',
                 'quantity' => '22',
-                'price' => '17,85',
+                'price' => '17.85',
                 'description' => 'Een super mooi all over print T-Shirt van koning Bowser senior, de koning van de Koopas. Wel bekend uit de Super Mario Bros videogames.'
             ],
             [
