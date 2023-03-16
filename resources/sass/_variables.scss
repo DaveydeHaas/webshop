@@ -5,3 +5,18 @@ $body-bg: #f8fafc;
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+.nav-content{
+    margin-top: 6%;
+    margin-right: var(--bs-navbar-brand-margin-end);
+    color: var(--bs-navbar-brand-color);
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 20px; 
+    font-weight: bold;
+}
+
+.nav-content:hover{
+    background-color: grey;
+    color: white;
+}
