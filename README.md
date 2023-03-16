@@ -23,13 +23,13 @@ php artisan optimize:clear
 # TO DO 
 2fa
 sales
-reviews
+reviews + migration
 payment method
 front-end
 admin-page
 login-page
 registration-page
-webhop
-basket
+webshop
+basket + migration
 user-profile
-orders
+orders + migration
